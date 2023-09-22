@@ -4,7 +4,7 @@ pipeline {
         stage('Récupération du code source depuis Git') {
             steps {
                 git branch: 'master', 
-                url: ''
+                url: 'https://github.com/ons33/springgit_pipeline.git'
             }
         }
         
