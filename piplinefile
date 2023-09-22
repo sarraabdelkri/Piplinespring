@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+    stages {
+        stage('Récupération du code source depuis Git') {
+            steps {
+                git branch: 'master', 
+                url: ''
+            }
+        }
+        
+        stage('Affichage de la date système') {
+            steps {
+                sh 'date'
+            }
+        }
+    }
+}
